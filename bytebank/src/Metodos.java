@@ -9,5 +9,17 @@ public class Metodos {
         boolean conseguiuRetirar = contaDoPaulo.saca(20);
         System.out.println(contaDoPaulo.saldo);
         System.out.println(conseguiuRetirar);
+
+        Conta contaDaMarcela = new Conta();
+        contaDaMarcela.deposita(1000);
+
+        if(contaDaMarcela.transfere(300, contaDoPaulo)) {
+            System.out.println("transferencia com sucesso");
+        } else {
+            System.out.println("faltou dinheiro");
+        }
+
+        System.out.println(contaDaMarcela.saldo);
+        System.out.println(contaDoPaulo);
     }
 }
